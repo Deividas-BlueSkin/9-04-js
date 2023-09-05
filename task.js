@@ -6,17 +6,18 @@
 
 console.group('pass')
 let pass = '11111111111111111100000001123'
+pass.trim(); //???
 
 if (pass.length < 16) {
     console.log('short')
 }
-if (pass.length > 15) {
+else if (pass.length > 15) {
 
 
     if (pass.length > 20) {
         console.log('perfec')
     }
-    if (pass.length < 20) {
+    else if (pass.length <= 20) {
         console.log('Hmm, I prefer longer')
     }
     if (!pass.includes('#')) {
@@ -119,12 +120,12 @@ let name = "Warlock"
 let time = 23
 let originDay = true
 
-if(online){
-    if(time <=12 && time >=5){console.log('mornin')}
-    if(time <=18 && time >=13){console.log('afernoon')}
-    if(time <=23 && time >=19 || time <=4 && time >=0){console.log('eve')}
-    if(originDay){console.log('bloody origin dear say, from the breeding pit oth come!!!')}
-}
+if (online) {
+    if (time <= 12 && time >= 5) { console.log('mornin') }
+    else if (time <= 18 && time > 12) { console.log('afernoon') }
+    else if (time > 18 || time < 5) { console.log('eve') }
+    if (originDay) { console.log('birthday!!!') }
+} else { console.log('Welcome') }
 
 
 console.groupEnd
