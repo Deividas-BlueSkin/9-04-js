@@ -120,12 +120,23 @@ let name = "Warlock"
 let time = 23
 let originDay = true
 
+let greeting = 'Welcome'
+
+// if (online) {
+//     if (time <= 12 && time >= 5) { console.log('mornin') }
+//     else if (time <= 18 && time > 12) { console.log('afernoon') }
+//     else if (time > 18 || time < 5) { console.log('eve') }
+//     if (originDay) { console.log('birthday!!!') }
+// } else { console.log('Welcome') }
+
 if (online) {
-    if (time <= 12 && time >= 5) { console.log('mornin') }
-    else if (time <= 18 && time > 12) { console.log('afernoon') }
-    else if (time > 18 || time < 5) { console.log('eve') }
-    if (originDay) { console.log('birthday!!!') }
-} else { console.log('Welcome') }
+    if (time <= 12 && time >= 5) { greeting +=' good mornin ' }
+    else if (time <= 18 && time > 12) { greeting += ' good afernoon ' }
+    else if (time > 18 || time < 5) { greeting += ' good eve ' }
+    if (originDay) { greeting +='and good birthday!!! ' }
+}
+
+console.log(greeting)
 
 
 console.groupEnd
