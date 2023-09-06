@@ -31,12 +31,12 @@ console.log(checkText('bingCho'))
 function pickChar(text, num) {
     let length = text.length
     if (length >= Math.abs(num) && num != 0) {
-        if (num < 0) { num = Length + num +1}
+        if (num < 0) { num = length + num +1}
         char = text[num - 1]
         return `${text} ${num} character is ${char}`
     }
     else {
-        return `ERROR: ${text} has ${Length} symbols, your number is too big or is 0`
+        return `ERROR: ${text} has ${length} symbols, your number is too big or is 0`
     }
 }
 
