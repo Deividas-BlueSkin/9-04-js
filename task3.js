@@ -40,4 +40,4 @@ function pickChar(text, num) {
     }
 }
 
-console.log(pickChar('Donuthor', -8))
+console.log(pickChar('LihmanTodle', -8))
