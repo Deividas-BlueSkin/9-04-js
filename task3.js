@@ -1,10 +1,11 @@
 function dayConvert(days, format) {
     let num
     if (format == 'min') { num = days * 24 * 60 }
-    if (format == 'hour') { num = days * 24 }
-    if (format == 'week') { Math.floor(num = days / 7) }
-    if (format == 'month') { Math.floor(mun = days / 30.4) }
-    if (format == 'year') { Math.floor(num = days / 365) }
+    else if (format == 'hour') { num = days * 24 }
+    else if (format == 'week') { Math.floor(num = days / 7) }
+    else if (format == 'month') { Math.floor(mun = days / 30.4) }
+    else if (format == 'year') { Math.floor(num = days / 365) }
+    else { return 'ERROR: wrong format' }
     return `${days} days --> ${num} ${format}s`
 }
 console.log(dayConvert(50, 'min'))
@@ -27,7 +28,7 @@ console.log(checkText('bingCho'))
 function pickChar(text, num) {
     let length = text.length
     if (length >= Math.abs(num) && num != 0) {
-        if (num < 0) { num = length + num +1}
+        if (num < 0) { num = length + num + 1 }
         char = text[num - 1]
         return `${text} ${num} character is ${char}`
     }
