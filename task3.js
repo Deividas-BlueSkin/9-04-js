@@ -1,4 +1,3 @@
-
 function dayConvert(days, format) {
     let num
     if (format == 'min') { num = days * 24 * 60 }
@@ -8,7 +7,6 @@ function dayConvert(days, format) {
     if (format == 'year') { Math.floor(num = days / 365) }
     return `${days} days --> ${num} ${format}s`
 }
-
 console.log(dayConvert(50, 'min'))
 
 function checkFraction(num1, num2) {
@@ -18,26 +16,28 @@ function checkFraction(num1, num2) {
     else { output = `${num1} nesidalija is ${num2}, liekana ${liek}` }
     return output
 }
-
 console.log(checkFraction(13, 10))
 
 function checkText(text = 'text') {
-    let por = (text.length % 2 == 0)
-    return por
+    let fr = (text.length % 2 == 0)
+    return fr
 }
-
 console.log(checkText('bingCho'))
 
 function pickChar(text, num) {
     let length = text.length
     if (length >= Math.abs(num) && num != 0) {
-        if (num < 0) { num = Length + num +1}
+        if (num < 0) { num = length + num +1}
         char = text[num - 1]
         return `${text} ${num} character is ${char}`
     }
     else {
-        return `ERROR: ${text} has ${Length} symbols, your number is too big or is 0`
+        return `ERROR: ${text} has ${length} symbols, your number is too big or is 0`
     }
 }
-
 console.log(pickChar('LihmanTodle', -8))
+
+
+
+
+
